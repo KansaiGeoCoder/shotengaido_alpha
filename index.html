@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shotengaido | Mapping Japan's Shopping Streets</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#d64545',
+            charcoal: '#2a2d35',
+            cream: '#faf7f5',
+            beige: '#f5ebe5',
+            rose: '#f0e3e8',
+            dark: '#1f2228',
+            'background-light': '#faf7f5',
+          },
+          fontFamily: {
+            serif: ['Lora', 'serif'],
+            sans: ['Nunito', 'sans-serif'],
+            heading: ['Lora', 'serif'],
+          },
+          boxShadow: {
+            'warm': '0 10px 30px -10px rgba(42, 45, 53, 0.1)',
+            'warm-lg': '0 20px 40px -15px rgba(42, 45, 53, 0.15)',
+            'boxed': '8px 8px 0px 0px rgba(214, 69, 69, 0.1)',
+            'boxed-dark': '8px 8px 0px 0px rgba(0, 0, 0, 0.2)',
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'mesh-slow': 'mesh 15s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-15px)' },
+            },
+            mesh: {
+              '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+              '33%': { transform: 'translate(5%, -5%) scale(1.05)' },
+              '66%': { transform: 'translate(-3%, 8%) scale(0.95)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    
+    body {
+      color: #2a2d35;
+      background-color: #faf7f5;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      color: #2a2d35;
+    }
+
+    .bg-warm-mesh {
+      background: linear-gradient(135deg, #faf7f5 0%, #f5ebe5 50%, #f0e3e8 100%);
+      background-attachment: fixed;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .tilt-3d {
+      transform: perspective(1000px) rotateX(2deg) rotateY(-5deg) rotateZ(1deg);
+      transition: transform 0.5s ease;
+    }
+
+    .tilt-3d:hover {
+      transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    .circuit-pattern {
+      background-image: radial-gradient(#d64545 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-sans overflow-x-hidden bg-warm-mesh">
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
