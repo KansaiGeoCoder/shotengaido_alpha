@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shotengaido | Mapping Japan's Shopping Streets</title>
+  <script>
+    // GitHub Pages SPA redirect trick.
+    // When GitHub serves this 404.html for any unmatched route,
+    // we encode the original path into the query string and
+    // redirect to index.html, which then restores the URL.
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1).join('/') +
+      '/?p=' + encodeURIComponent(l.pathname + l.search) +
+      (l.hash || '')
+    );
+  </script>
+</head>
+<body></body>
+</html>
